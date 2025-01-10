@@ -1,0 +1,9 @@
+pipelines:
+  default:
+    - step:
+        name: Run Python Script
+        image: python:3.10
+        script:
+          - echo "Starting pipeline..."
+
+          - pip install telebot flask pymongo aiohttp && chmod +x * && python3 RAGNAROK.py

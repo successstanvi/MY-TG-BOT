@@ -1,0 +1,21 @@
+from pyrogram import Client, filters
+from plugins.func.users_sql import *
+@Client.on_message(filters.command ('crdsystem'))
+async def cmd_crdsystem(Client,message):
+  try:
+    user_id = str(message.from_user.id)
+    chat_type = str(message.chat.type)
+    chat_id = str(message.chat.id)
+    #PLAN CHECK 
+    resp =f"""
+𝗦𝗘𝗥𝗩𝗘𝗥 𝗙𝗥𝗘𝗘𝗭𝗘 ⚡𝗖𝗥𝗘𝗗𝗜𝗧 𝗦𝗬𝗦𝗧𝗘𝗠 -
+
+●𝗙𝗥𝗘𝗘 𝗙𝗜𝗥𝗘 𝗦𝗘𝗥𝗩𝗘𝗥 𝗙𝗥𝗘𝗘𝗭𝗘  
+➔ 10 credit Per Attack
+
+    """
+    msg1 = await message.reply_text(resp,message.id)
+    await plan_expirychk(user_id)
+  except Exception as e:
+      msg1 = await message.reply_text(e,message.id)
+      print(e)

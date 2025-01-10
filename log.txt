@@ -1,0 +1,6 @@
+UserID: 7879803379 | Time: 2025-01-10 15:37:22.399446 | Command: /bgmi | Target: 103.219.200.131 | Port: 10017 | Time: 200
+Username: UserID: 7879803379
+Target: 103.219.200.131
+Port: 10017
+Time: 200
+
